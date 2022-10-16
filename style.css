@@ -3,10 +3,9 @@ html, body {
   padding: 0;
   background-color: #000;
   font-family: 'Courier';
-  color: #FFF;
   font-size: 8pt;
-  letter-spacing: 1pt;
-  line-height: 7pt;
+  letter-spacing: 2pt;
+  line-height: 8pt;
 }
 
 div {
