@@ -2,7 +2,8 @@
 // The Coding Train / Daniel Shiffman
 // https://thecodingtrain.com/CodingChallenges/166-ascii-image.html
 // https://youtu.be/55iwMYv8tGI
-const density = "Ñ@#W$9876543210?!abc;:+=-,._       ";
+
+const density = "Ñ@#W$9876543210?!abc;:+=-,._    ";
 
 let video;
 let asciiDiv;
@@ -10,13 +11,13 @@ let asciiDiv;
 function setup() {
   noCanvas();
   video = createCapture(VIDEO);
-  video.hide();
   video.size(187, 128);
   asciiDiv = createDiv();
 }
 
 function draw() {
   video.loadPixels();
+  video.hide();
   let asciiImage = "";
   for (let j = 0; j < video.height; j++) {
     for (let i = 0; i < video.width; i++) {
