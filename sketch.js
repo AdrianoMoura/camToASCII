@@ -11,13 +11,12 @@ let asciiDiv;
 function setup() {
   noCanvas();
   video = createCapture(VIDEO);
-  video.size(187, 128);
+  video.size(120, 82);
   asciiDiv = createDiv();
 }
 
 function draw() {
   video.loadPixels();
-  video.hide();
   let asciiImage = "";
   for (let j = 0; j < video.height; j++) {
     for (let i = 0; i < video.width; i++) {
@@ -30,7 +29,7 @@ function draw() {
       const charIndex = floor(map(avg, 0, 255, len, 0));
       const c = density.charAt(charIndex);
       if (c == " ") asciiImage += "&nbsp;";
-      else asciiImage += c;
+      else asciiImage += `<span style="color: rgb(${r},${g},${b})">${c}</span>`;
     }
     asciiImage += '<br/>';
   }
