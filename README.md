@@ -1,4 +1,4 @@
-#CamToASCII
+# CamToASCII
 
 Based on Image to ASCII Coding Train Tutorial  
 The Coding Train / Daniel Shiffman  
