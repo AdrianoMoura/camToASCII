@@ -7,11 +7,14 @@ const density = "Ñ@#W$9876543210?!abc;:+=-,._    ";
 
 let video;
 let asciiDiv;
+let hasColor = false;
 
 function setup() {
   noCanvas();
   video = createCapture(VIDEO);
   video.size(120, 82);
+  buttonColor = createButton('Color');
+  buttonColor.mousePressed(doColor)
   asciiDiv = createDiv();
 }
 
@@ -29,9 +32,13 @@ function draw() {
       const charIndex = floor(map(avg, 0, 255, len, 0));
       const c = density.charAt(charIndex);
       if (c == " ") asciiImage += "&nbsp;";
-      else asciiImage += `<span style="color: rgb(${r},${g},${b})">${c}</span>`;
+      else asciiImage += hasColor ? `<span style="color: rgb(${r},${g},${b})">${c}</span>` : c;
     }
     asciiImage += '<br/>';
   }
   asciiDiv.html(asciiImage);
+}
+
+function doColor() {
+  hasColor = !hasColor;
 }
