@@ -3,7 +3,7 @@
 // https://thecodingtrain.com/CodingChallenges/166-ascii-image.html
 // https://youtu.be/55iwMYv8tGI
 
-const density = "Ñ@#W$9876543210?!abc;:+=-,._    ";
+const density = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~i!lI;:,^'.         ";
 
 let video;
 let asciiDiv;
