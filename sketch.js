@@ -12,7 +12,12 @@ let hasColor = false;
 function setup() {
   noCanvas();
   video = createCapture(VIDEO);
-  video.size(120, 82);
+
+  videoHeight = 75;
+  videoWidth = videoHeight / video.height * video.width;
+  
+  video.size(videoWidth, videoHeight);
+
   buttonColor = createButton('Color');
   buttonColor.mousePressed(doColor)
   asciiDiv = createDiv();
